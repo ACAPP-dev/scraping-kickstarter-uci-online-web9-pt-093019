@@ -14,7 +14,7 @@ def create_project_hash
     location = project.css("ul.project-meta").text.strip
     funded = project.css("ul.project-stats li.first.funded strong").text.gsub("%", " ").to_i
 
-    project_hash[name] = {:image_link => image, 
+    project_hash[name] = {:image_link => image,
                           :description => description,
                           :location => location,
                           :percent_funded => funded}
